@@ -12,7 +12,8 @@ export const Card = (props: Props) => {
   return (
     <div
       className={cn(
-        'layer layer-full border border-black bg-gray-150 p-4 rounded-md relative',
+        'layer layer-full border border-black bg-gray-150 px-4 py-5 rounded-md relative',
+        props.className,
         { 'mt-10 rounded-tr-none': !!props.label }
       )}
     >

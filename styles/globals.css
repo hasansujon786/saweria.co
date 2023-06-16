@@ -2,11 +2,19 @@
   --sdw-gap: 7px;
 }
 
+a,
+button {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 ring-offset-background;
+}
+
 .layer {
   @apply before:bg-[#222] before:absolute before:top-3 before:left-3 before:rounded-md before:-z-10;
 }
 .layer-full {
   @apply before:h-full before:w-full;
+}
+.f-center {
+  @apply flex justify-center items-center;
 }
 
 /* button::before { */

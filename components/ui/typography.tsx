@@ -32,7 +32,11 @@ export const H2 = ({ children, className }: Props) => {
 }
 
 export const H3 = ({ children, className }: Props) => {
-  return <h3 className={cn('text-3xl lg:text-4xl', className)}>{children}</h3>
+  return <h3 className={cn('text-3xl font-medium', className)}>{children}</h3>
+}
+
+export const H4 = ({ children, className }: Props) => {
+  return <h3 className={cn('text-2xl font-medium', className)}>{children}</h3>
 }
 
 export const Mono = ({ children, className }: Props) => {

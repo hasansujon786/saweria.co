@@ -7,7 +7,6 @@ const buttonVariants = cva(
   cn(
     'inline-flex items-center justify-center relative',
     'text-xl font-mono border border-black',
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background',
     'disabled:opacity-50 disabled:pointer-events-none',
     'before:bg-[#222] before:absolute before:h-full before:w-full before:-z-10',
     'before:top-[var(--sdw-gap)] before:left-[var(--sdw-gap)] before:rounded-md rounded-md',
