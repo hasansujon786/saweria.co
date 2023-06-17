@@ -9,7 +9,7 @@ export const H1 = ({ children, className }: Props) => {
   return (
     <h1
       className={cn(
-        'scroll-m-20 text-4xl tracking-tight lg:text-5xl',
+        'font-sans scroll-m-20 text-4xl tracking-tight lg:text-5xl',
         className
       )}
     >
@@ -22,7 +22,7 @@ export const H2 = ({ children, className }: Props) => {
   return (
     <h2
       className={cn(
-        'scroll-m-20 text-3xl tracking-tight lg:text-4xl',
+        'font-sans scroll-m-20 text-3xl tracking-tight lg:text-4xl',
         className
       )}
     >
@@ -32,11 +32,19 @@ export const H2 = ({ children, className }: Props) => {
 }
 
 export const H3 = ({ children, className }: Props) => {
-  return <h3 className={cn('text-3xl font-medium', className)}>{children}</h3>
+  return (
+    <h3 className={cn('font-sans text-3xl font-medium', className)}>
+      {children}
+    </h3>
+  )
 }
 
 export const H4 = ({ children, className }: Props) => {
-  return <h3 className={cn('text-2xl font-medium', className)}>{children}</h3>
+  return (
+    <h3 className={cn('font-sans text-2xl font-medium', className)}>
+      {children}
+    </h3>
+  )
 }
 
 export const Mono = ({ children, className }: Props) => {

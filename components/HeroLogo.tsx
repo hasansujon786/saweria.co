@@ -11,7 +11,7 @@ export const HeroLogo = () => {
         className='pt-4'
         alt='homepage_characters'
       />
-      <h1 className='mt-1 text-4xl lg:text-6xl font-extralight tracking-tight'>
+      <h1 className='mt-1 font-sans text-4xl lg:text-6xl font-extralight tracking-tight'>
         {appName}
       </h1>
     </div>
