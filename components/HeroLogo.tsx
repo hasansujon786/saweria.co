@@ -1,4 +1,5 @@
 import { appName } from '@/constants/strings'
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
 export const HeroLogo = () => {
@@ -11,7 +12,24 @@ export const HeroLogo = () => {
         className='pt-4'
         alt='homepage_characters'
       />
-      <h1 className='mt-1 font-sans text-4xl lg:text-6xl font-extralight tracking-tight'>
+      <h1 className='font-sans text-4xl lg:text-6xl font-extralight tracking-tight'>
+        {appName}
+      </h1>
+    </div>
+  )
+}
+
+export const HeroLogoSmall = ({ className }: { className?: string }) => {
+  return (
+    <div className={cn('flex items-end', className)}>
+      <Image
+        width={80}
+        height={80}
+        src='/assets/svg/homepage_characters.svg'
+        alt='homepage_characters'
+        className=''
+      />
+      <h1 className='font-sans text-4xl font-extralight tracking-tight'>
         {appName}
       </h1>
     </div>

@@ -16,8 +16,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        gray: {
-          150: '#F2F7F5',
+        layer: {
+          red: '#FE98A3',
+          blue: '#B2E0E6',
+          purple: '#C2ACE6',
+          yellow: '#FAC76C',
+          gray: '#F2F7F5',
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

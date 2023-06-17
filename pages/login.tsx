@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { H3 } from '@/components/ui/typography'
+import Link from 'next/link'
 
 function Login() {
   return (
@@ -18,8 +19,8 @@ function Login() {
           <a href='' className='text-lg flex-1'>
             Lupa Password
           </a>
-          <Button className='flex-1' variant='secondary'>
-            Masuk
+          <Button asChild className='flex-1' variant='secondary'>
+            <Link href='/admin'>Masuk</Link>
           </Button>
         </div>
       </Card>
