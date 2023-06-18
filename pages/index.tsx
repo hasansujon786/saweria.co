@@ -79,7 +79,7 @@ export default function Home() {
       <Card
         label='pricing'
         labelSeconday
-        className='bg-red-200 flex justify-center gap-x-6'
+        className='flex justify-center gap-x-6'
       >
         <div className='space-y-5 w-[26ch]'>
           <Mono>
