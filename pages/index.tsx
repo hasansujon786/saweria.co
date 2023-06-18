@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className='min-h-screen flex flex-col gap-y-12 | w-10/12 max-w-xl mx-auto'>
+    <div className='flex flex-col gap-y-12'>
       <div>
         <HeroLogo />
         <H3 className='text-center mt-8'>
@@ -122,7 +122,14 @@ export default function Home() {
           Syarat dan Ketentuan
         </Button>
       </div>
+    </div>
+  )
+}
 
+Home.getLayout = (page: React.ReactElement) => {
+  return (
+    <div className='min-h-screen w-10/12 max-w-xl mx-auto'>
+      {page}
       <Footer />
     </div>
   )

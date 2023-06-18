@@ -1,4 +1,3 @@
-import { Footer } from '@/components/Footer'
 import { HeroLogo } from '@/components/HeroLogo'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/button'
@@ -8,7 +7,7 @@ import Link from 'next/link'
 
 function Login() {
   return (
-    <div className='pt-4 | w-11/12 max-w-2xl mx-auto'>
+    <div className='pt-4'>
       <Card>
         <HeroLogo />
         <H3 className='text-center mt-8'>Login</H3>
@@ -24,10 +23,9 @@ function Login() {
           </Button>
         </div>
       </Card>
-
-      <Footer />
     </div>
   )
 }
 
 export default Login
+

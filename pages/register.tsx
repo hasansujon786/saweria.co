@@ -1,4 +1,3 @@
-import { Footer } from '@/components/Footer'
 import { HeroLogo } from '@/components/HeroLogo'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/button'
@@ -8,7 +7,7 @@ import { H3 } from '@/components/ui/typography'
 
 function Register() {
   return (
-    <div className='pt-4 | w-11/12 max-w-2xl mx-auto'>
+    <div className='pt-4'>
       <Card>
         <HeroLogo />
         <H3 className='text-center mt-8'>Registrasi</H3>
@@ -37,10 +36,9 @@ function Register() {
           </Button>
         </div>
       </Card>
-
-      <Footer />
     </div>
   )
 }
 
 export default Register
+

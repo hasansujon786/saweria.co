@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className='flex justify-between text-lg font-mono py-8'>
+    <footer className='flex justify-between text-lg font-mono py-8 mt-auto'>
       <div className='space-y-3 mt-auto'>
         <p>Made with 💙 from SUB</p>
         <p>PT Harta Tahta Sukaria</p>
