@@ -58,3 +58,22 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button'
 
 export { Button, buttonVariants }
+
+export interface IconButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  asChild?: boolean
+}
+export const IconButton = ({ children, asChild, className, ...props }: IconButtonProps) => {
+  const Comp = asChild ? Slot : 'button'
+  return (
+    <Comp
+      className={cn(
+        'p-2.5 rounded-md focus-ring hover:bg-blue-100 text-foreground',
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </Comp>
+  )
+}

@@ -48,24 +48,25 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
         />
       </div>
 
-
 # Routes
+
 /login
 /register
 /admin
+/transactions
+/transactions/outgoing
 
+/transactions/cashout
 /overlays
-
 /faq
 /admin/integrations
 /profile
-/transactions
-/transactions/cashout
-/transactions/outgoing
+/terms
 https://saweria.co/Dreamocel
 
-
 # FAQ
-add this comment at the top of the file /* tslint:disable */
+
+add this comment at the top of the file /_ tslint:disable _/
 // @ts-nocheck
 // @ts-ignore
+https://www.typescriptlang.org/tsconfig

@@ -1,8 +1,10 @@
 import { Footer } from '@/components/Footer'
 import { HeroLogo } from '@/components/HeroLogo'
 import { Card } from '@/components/ui/Card'
+import { ColorBox } from '@/components/ui/ColorBox'
 import { Button } from '@/components/ui/button'
 import { H3, H4, Mono } from '@/components/ui/typography'
+import { AppRoutes } from '@/constants/strings'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -16,10 +18,10 @@ export default function Home() {
         </H3>
         <div className='space-x-8 mt-6 text-center'>
           <Button asChild variant='secondary'>
-            <Link href='/login'>Login</Link>
+            <Link href={AppRoutes.login}>Login</Link>
           </Button>
           <Button asChild>
-            <Link href='/register'>Daftar </Link>
+            <Link href={AppRoutes.register}>Daftar</Link>
           </Button>
         </div>
       </div>
@@ -73,7 +75,9 @@ export default function Home() {
           alt='homepage_characters'
         />
         <H4>siap bergabung bersama saweria?</H4>
-        <Button>Daftar</Button>
+        <Button asChild>
+          <Link href={AppRoutes.register}>Daftar</Link>
+        </Button>
       </div>
 
       <Card
@@ -100,21 +104,23 @@ export default function Home() {
         />
       </Card>
 
-      <Card className='bg-red-200 flex justify-center gap-x-6'>
-        <div className='f-center'>
-          <Image
-            width={70}
-            height={70}
-            src='/assets/svg/chicken_sad.svg'
-            alt='homepage_characters'
-          />
+      <ColorBox href={AppRoutes.faq} className='bg-red-200 py-8'>
+        <div className='flex justify-center gap-x-6'>
+          <div className='f-center'>
+            <Image
+              width={70}
+              height={70}
+              src='/assets/svg/chicken_sad.svg'
+              alt='homepage_characters'
+            />
+          </div>
+          <div className='text-center space-y-2 mt-3'>
+            <H3>bingung?</H3>
+            <H3>ada pertanyaan?</H3>
+            <H3>cek FAQ kami dulu</H3>
+          </div>
         </div>
-        <div className='text-center space-y-2 mt-3'>
-          <H3>bingung?</H3>
-          <H3>ada pertanyaan?</H3>
-          <H3>cek FAQ kami dulu</H3>
-        </div>
-      </Card>
+      </ColorBox>
 
       <div className='gap-6 flex flex-col md:flex-row'>
         <Button size='lg'>Tutorial</Button>
