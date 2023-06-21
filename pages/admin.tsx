@@ -39,10 +39,11 @@ const sections = [
 
 export default function Admin() {
   return (
-    <div className='grid grid-cols-2 gap-10'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
       {sections.map((section) => (
         <ColorBox
           href={section.link}
+          key={section.link}
           className={cn('px-12 py-5', section.varient)}
         >
           <div className='flex justify-between'>

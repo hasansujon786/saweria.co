@@ -1,9 +1,11 @@
 import { ColorBox } from '@/components/ui/ColorBox'
 import { Button, IconButton } from '@/components/ui/button'
 import { H1, H3 } from '@/components/ui/typography'
+import { AppRoutes } from '@/constants/strings'
 import AdminLayout from '@/layouts/admin'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Transactions() {
   return (
@@ -36,7 +38,9 @@ export default function Transactions() {
                 Angka di atas adalah total saldo yang siap dicairkan.
               </p>
               <div>
-                <Button>Cairkan</Button>
+                <Button asChild>
+                  <Link href={AppRoutes.transactions_cashout}>Cairkan</Link>
+                </Button>
               </div>
             </div>
             <Image

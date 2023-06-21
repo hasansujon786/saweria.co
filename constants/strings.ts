@@ -8,5 +8,6 @@ export const AppRoutes = {
   overlays: '/overlays',
   transactions: '/transactions',
   transactions_outgoing: '/transactions/outgoing',
+  transactions_cashout: '/transactions/cashout',
   faq: '/faq',
 }

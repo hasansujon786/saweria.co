@@ -34,18 +34,28 @@ export interface InputProps
 // TODO: add error state
 export const Input = ({ label, message, ...props }: InputProps) => {
   return (
-    <div className='grid w-full items-center outline-1 outline-black'>
-      {label && (
-        <Label className='text-gray-700 text-base mt-4' htmlFor={props.id}>
-          {label} {props.required && <span className='text-red-500'>*</span>}
-        </Label>
-      )}
+    <FormElement label={label} message={message} {...props}>
       <BaseInput
         className='placeholder:text-gray-400'
         type='email'
         {...props}
       />
-      <p className='mt-0.5 text-sm text-muted-foreground'>{message}</p>
+    </FormElement>
+  )
+}
+
+export const FormElement = ({ label, message, ...props }: InputProps) => {
+  return (
+    <div className='flex flex-col justify-between h-full w-full utline outline-red-400 '>
+      {label && (
+        <Label className='text-gray-700 text-base' htmlFor={props.id}>
+          {label} {props.required && <span className='text-red-500'>*</span>}
+        </Label>
+      )}
+      {props.children}
+      <p className='mt-0.5 min-h-[20px] text-sm text-muted-foreground'>
+        {message}
+      </p>
     </div>
   )
 }
