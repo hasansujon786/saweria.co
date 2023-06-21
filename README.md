@@ -55,11 +55,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 /admin
 /transactions
 /transactions/outgoing
-
 /transactions/cashout
+/admin/integrations
+
+
 /overlays
 /faq
-/admin/integrations
 /profile
 /terms
 https://saweria.co/Dreamocel

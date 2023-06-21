@@ -29,7 +29,8 @@
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 100% 50%;
+    /* --destructive: 0 100% 50%; */
+    --destructive: 354 98.1% 79.6%;
     --destructive-foreground: 210 40% 98%;
 
     --ring: 215 20.2% 65.1%;
@@ -76,7 +77,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-y-scroll;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
