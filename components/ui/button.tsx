@@ -7,10 +7,10 @@ const buttonVariants = cva(
   cn(
     'inline-flex items-center justify-center relative focus-ring',
     'text-xl font-mono border border-black',
-    'disabled:opacity-50 disabled:pointer-events-none',
+    'disabled:pointer-events-none',
     'before:bg-[#222] before:absolute before:h-full before:w-full before:-z-10',
     'before:top-[var(--sdw-gap)] before:left-[var(--sdw-gap)] before:rounded-md rounded-md',
-    'before:transition-transform active:before:-translate-y-[3px] active:before:-translate-x-[3px]'
+    'before:transition-transform active:before:-translate-y-[3px] active:before:-translate-x-[3px] disabled:before:-translate-y-[3px] disabled:before:-translate-x-[3px]'
   ),
   {
     variants: {
@@ -63,17 +63,17 @@ export interface IconButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean
 }
-export const IconButton = ({ children, asChild, className, ...props }: IconButtonProps) => {
+export const IconButton = ({ asChild, ...props }: IconButtonProps) => {
   const Comp = asChild ? Slot : 'button'
   return (
     <Comp
       className={cn(
         'p-2.5 rounded-md focus-ring hover:bg-blue-100 text-foreground',
-        className
+        props.className
       )}
       {...props}
     >
-      {children}
+      {props.children}
     </Comp>
   )
 }

@@ -14,6 +14,7 @@ export const NavigationRail = (props: NavigationRailProps) => {
       <div className='flex flex-col gap-4'>
         {props.names.map((name, idx) => (
           <Button
+            disabled={curSection === idx}
             onClick={() => handleSectionChange(idx)}
             key={name}
             variant='secondary'
