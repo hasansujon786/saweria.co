@@ -8,7 +8,7 @@ export default function Outgoing() {
     <div>
       <H3>Histori Dukungan:</H3>
       <div className='flex justify-end items-center gap-2'>
-        <Label className='text-lg'>Lihat sebagai tabel</Label>
+        <Label>Lihat sebagai tabel</Label>
         <Switch />
       </div>
       <table

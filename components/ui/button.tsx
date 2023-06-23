@@ -26,7 +26,7 @@ const buttonVariants = cva(
       },
       size: {
         default: 'h-12 px-5 py-2',
-        lg: 'h-20 px-5 flex-1 py-2',
+        lg: 'h-[4.5rem] px-5 flex-1 py-2',
         md: 'h-16 px-5 py-2',
       },
     },

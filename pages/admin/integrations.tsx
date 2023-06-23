@@ -11,17 +11,17 @@ const SecDiscord = () => {
   return (
     <div>
       <Card className='grid grid-cols-1 gap-3'>
-        <H3>Discord </H3>
+        <H3>Discord</H3>
         <p>Kirimkan alert dukungan kamu sebagai pesan pada channel discord!</p>
 
         <div className='grid grid-cols-2'>
           <div className='flex items-center gap-3'>
-            <Label className='text-gray-700 text-base'>Nyalakan:</Label>
+            <Label>Nyalakan:</Label>
             <Switch />
           </div>
 
           <div className='flex items-center gap-2'>
-            <Label className='text-gray-700 text-base'>Hitungan Gagal:</Label>
+            <Label>Hitungan Gagal:</Label>
             <div className='flex-1'>
               <BaseInput defaultValue={0} readOnly aria-readonly />
             </div>
@@ -42,11 +42,11 @@ const SecDiscord = () => {
 
         <div className='space-y-2'>
           <p>
-            Untuk menemukan url webhook discord, klik{' '}
+            Untuk menemukan url webhook discord, klik&nbsp;
             <svg
               stroke='currentColor'
               fill='currentColor'
-              stroke-width='0'
+              strokeWidth='0'
               viewBox='0 0 512 512'
               focusable='false'
               className='inline mr-2'
@@ -78,7 +78,6 @@ const SecDiscord = () => {
 }
 
 const SecWebhook = () => {
-  console.log('Webhook')
   return (
     <div>
       <Card className='grid grid-cols-1 gap-3'>
@@ -86,12 +85,12 @@ const SecWebhook = () => {
 
         <div className='grid grid-cols-2'>
           <div className='flex items-center gap-3'>
-            <Label className='text-gray-700 text-base'>Nyalakan:</Label>
+            <Label>Nyalakan:</Label>
             <Switch />
           </div>
 
           <div className='flex items-center gap-2'>
-            <Label className='text-gray-700 text-base'>Hitungan Gagal:</Label>
+            <Label>Hitungan Gagal:</Label>
             <div className='flex-1'>
               <BaseInput defaultValue={0} readOnly aria-readonly />
             </div>
