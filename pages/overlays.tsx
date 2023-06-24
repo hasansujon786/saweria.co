@@ -1,6 +1,9 @@
 import { NavigationRail } from '@/components/NavigationRail'
 import { SectionAlert } from '@/components/overlays/SectionAlert'
+import { SectionLeaderBoard } from '@/components/overlays/SectionLeaderBoard'
 import { SectionMediaShare } from '@/components/overlays/SectionMediaShare'
+import { SectionMilestone } from '@/components/overlays/SectionMilestone'
+import { SectionQrCode } from '@/components/overlays/SectionQrCode'
 import { SectionSubathon } from '@/components/overlays/SectionSubathon'
 import { SectionVoting } from '@/components/overlays/SectionVoting'
 import AdminLayout from '@/layouts/admin'
@@ -24,6 +27,9 @@ export default function Overlays() {
         SectionMediaShare,
         SectionSubathon,
         SectionVoting,
+        SectionQrCode,
+        SectionMilestone,
+        SectionLeaderBoard,
       ]}
     />
   )

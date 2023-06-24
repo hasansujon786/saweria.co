@@ -1,5 +1,4 @@
 import {
-  BannerTimePreviewBox,
   ColorInput,
   FontInput,
   UrlFooterBox,
@@ -7,10 +6,10 @@ import {
 import { Card } from '@/components/ui/Card'
 import { Button, IconButton } from '@/components/ui/button'
 import { BaseCheckbox } from '@/components/ui/checkbox'
-import { BaseInput, FormElement, Input } from '@/components/ui/input'
+import { FormElement, Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { H3, H4 } from '@/components/ui/typography'
-import { Play, Plus, Settings, X } from 'lucide-react'
+import { Plus, X } from 'lucide-react'
 
 export const SectionVoting = () => {
   return (
@@ -93,7 +92,7 @@ export const SectionVoting = () => {
   )
 }
 
-export const CreateVotingOptions = () => {
+const CreateVotingOptions = () => {
   return (
     <FormElement message='Minimum choice of 2 and a maximum of 5'>
       <div className='flex items-center gap-3'>

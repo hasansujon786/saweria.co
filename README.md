@@ -58,8 +58,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 /transactions/cashout
 /admin/integrations
 
-
 /overlays
+
 /faq
 /profile
 /terms
