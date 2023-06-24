@@ -4,8 +4,10 @@ import { SectionLeaderBoard } from '@/components/overlays/SectionLeaderBoard'
 import { SectionMediaShare } from '@/components/overlays/SectionMediaShare'
 import { SectionMilestone } from '@/components/overlays/SectionMilestone'
 import { SectionQrCode } from '@/components/overlays/SectionQrCode'
+import { SectionRunningText } from '@/components/overlays/SectionRunningText'
 import { SectionSubathon } from '@/components/overlays/SectionSubathon'
 import { SectionVoting } from '@/components/overlays/SectionVoting'
+import { SectionWheel } from '@/components/overlays/SectionWheel'
 import AdminLayout from '@/layouts/admin'
 
 export default function Overlays() {
@@ -30,6 +32,8 @@ export default function Overlays() {
         SectionQrCode,
         SectionMilestone,
         SectionLeaderBoard,
+        SectionRunningText,
+        SectionWheel,
       ]}
     />
   )

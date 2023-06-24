@@ -25,7 +25,10 @@ export const SectionVoting = () => {
           </div>
 
           <Input label='Judul:' />
-          <CreateVotingOptions />
+
+          <FormElement message='Minimum choice of 2 and a maximum of 5'>
+            <CreateVotingOptions label='Nyalakan Voting:' />
+          </FormElement>
 
           <div className='grid grid-cols-2 gap-y-1 gap-x-1'>
             <Input label='Tanggal mulai:' defaultValue='06/24/2023' />
@@ -92,11 +95,14 @@ export const SectionVoting = () => {
   )
 }
 
-const CreateVotingOptions = () => {
+type CreateVotingOptionsProps = {
+  label: string
+}
+export const CreateVotingOptions = (props: CreateVotingOptionsProps) => {
   return (
-    <FormElement message='Minimum choice of 2 and a maximum of 5'>
+    <div>
       <div className='flex items-center gap-3'>
-        <Label>Nyalakan Voting:</Label>
+        <Label>{props.label}</Label>
         <IconButton className='border border-input bg-accent p-1'>
           <Plus size={20} />
         </IconButton>
@@ -122,6 +128,6 @@ const CreateVotingOptions = () => {
           </div>
         ))}
       </div>
-    </FormElement>
+    </div>
   )
 }
