@@ -1,5 +1,8 @@
 import { NavigationRail } from '@/components/NavigationRail'
 import { SectionAlert } from '@/components/overlays/SectionAlert'
+import { SectionMediaShare } from '@/components/overlays/SectionMediaShare'
+import { SectionSubathon } from '@/components/overlays/SectionSubathon'
+import { SectionVoting } from '@/components/overlays/SectionVoting'
 import AdminLayout from '@/layouts/admin'
 
 export default function Overlays() {
@@ -16,7 +19,12 @@ export default function Overlays() {
         'Running Text',
         'Wheel',
       ]}
-      sections={[SectionAlert]}
+      sections={[
+        SectionAlert,
+        SectionMediaShare,
+        SectionSubathon,
+        SectionVoting,
+      ]}
     />
   )
 }

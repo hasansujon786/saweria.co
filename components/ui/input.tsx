@@ -51,7 +51,8 @@ export const Input = ({ label, message, ...props }: InputProps) => {
 
 export const FormElement = ({ label, message, ...props }: InputProps) => {
   return (
-    <div className='flex flex-col justify-between h-full w-full utline outline-red-400 '>
+    // <div className='flex flex-col justify-between h-full w-full utline outline-red-400 '>
+    <div>
       {label && (
         <Label htmlFor={props.id}>
           {label} {props.required && <span className='text-red-500'>*</span>}

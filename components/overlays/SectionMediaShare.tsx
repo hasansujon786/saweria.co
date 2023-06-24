@@ -1,76 +1,49 @@
+import {
+  BannerPreviewBox,
+  ColorInput,
+  FontInput,
+  UrlFooterBox,
+} from '@/components/overlays/shared'
 import { Card } from '@/components/ui/Card'
 import { Button, IconButton } from '@/components/ui/button'
 import { BaseCheckbox } from '@/components/ui/checkbox'
-import { BaseInput, FormElement, Input } from '@/components/ui/input'
+import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { SelectElement } from '@/components/ui/select'
-import { Switch } from '@/components/ui/switch'
-import { Textarea } from '@/components/ui/textarea'
 import { H4 } from '@/components/ui/typography'
-import { voiceVarientOptions } from '@/constants/options'
-import { BannerPreviewBox, ColorInput, FontInput, UrlFooterBox } from './shared'
 
-export const SectionAlert = () => {
+export const SectionMediaShare = () => {
   return (
     <div className='grid grid-cols-1 gap-8'>
       <div>
         <p className='mb-4'>
-          Pasang overlay ini untuk mendapatkan notifikasi saat ada dukungan yang
-          masuk
+          Gunakan overlay ini untuk membolehkan penontonmu mengirimkan youtube
+          video untuk ditampilkan pada streammu.
         </p>
         <Card className='grid grid-cols-1 gap-3'>
-          <H4>Aturan Alert:</H4>
+          <H4>Pengaturan Mediashare:</H4>
 
-          <div className='grid grid-cols-2'>
+          <div className='grid grid-cols-3 gap-4'>
             <div className='flex flex-col gap-3'>
-              <Label>Nyalakan gif:</Label>
+              <Label>Aktifkan media share.</Label>
               <BaseCheckbox className='ml-px h-6 w-6' />
             </div>
 
-            <FormElement label='Varian suara Text To Speech:'>
-              <SelectElement defaultValue='0' items={voiceVarientOptions} />
-            </FormElement>
+            <Input defaultValue='300' label='Maksimum video (detik):' />
+            <Input defaultValue='Rp 100' label='Berapa rupiah per detik?' />
           </div>
 
           <H4>Aturan minimum:</H4>
           <div className='grid grid-cols-3 gap-4'>
-            <Input defaultValue='Rp 10.000' label='Alert notifikasi:' />
             <Input defaultValue='Rp 10.000' label='GIF / media share:' />
-            <Input defaultValue='Rp 10.000' label='Text To Speech:' />
           </div>
 
           <div className='relative z-10'>
-            <Button variant='secondary'>Simpan Aturan</Button>
+            <Button variant='secondary'>Simpan</Button>
           </div>
         </Card>
       </div>
 
-      <Card>
-        <H4>Suara Notifikasi Alert:</H4>
-        <div className='relative z-10 flex gap-4'>
-          <div className='flex-1'>
-            <BaseInput defaultValue='default' className='border-transparent' />
-          </div>
-          <Button variant='secondary' className='px-16'>
-            Ganti Suara
-          </Button>
-        </div>
-      </Card>
-
-      <Card>
-        <H4>Filter kata:</H4>
-        <p>
-          Pesan dukungan dan nama pendukung tidak akan ditampilkan jika
-          mengandung kata-kata dibawah ini. Pisahkan kata dengan&nbsp;
-          <span className='font-bold'>spasi</span>.
-        </p>
-        <div className='my-4'>
-          <Textarea />
-        </div>
-        <div className='relative z-10'>
-          <Button variant='secondary'>Simpan Kata</Button>
-        </div>
-      </Card>
+      {/* TODO: place video */}
 
       <BannerPreviewBox />
 
@@ -98,14 +71,6 @@ export const SectionAlert = () => {
               ></path>
             </svg>
           </IconButton>
-
-          <div className='ml-auto'>
-            <div className='flex items-center gap-3'>
-              <Label>Default</Label>
-              <Switch />
-              <Label>Custom</Label>
-            </div>
-          </div>
         </div>
 
         <div className='grid grid-cols-3 gap-4 relative z-0'>
@@ -116,22 +81,24 @@ export const SectionAlert = () => {
 
         <div className='grid grid-cols-3 gap-x-4 mt-8'>
           <Input label='Template teks:' defaultValue='baru saja memberikan' />
-
           <div className='flex flex-col gap-3'>
             <Label>Tanpa Border:</Label>
             <BaseCheckbox className='ml-0.5 h-6 w-6' />
           </div>
-
           <Input label='Ketebalan Teks:' defaultValue='500' />
-          <Input label='Durasi Notifikasi (ms):' defaultValue='5000' />
           <FontInput />
+          <div className='flex flex-col gap-3'>
+            <Label>Tampilkan media NSFW:</Label>
+            <BaseCheckbox className='ml-0.5 h-6 w-6' />
+          </div>
         </div>
+
         <div className='relative z-0'>
           <Button variant='secondary'>Simpan Tampilan</Button>
         </div>
       </Card>
 
-      <UrlFooterBox url='https://saweria.co/widgets/alert?streamKey=c1e89a4cda4c630338c854cd9e9c8d74' />
+      <UrlFooterBox url='https://saweria.co/widgets/mediashare?streamKey=c1e89a4cda4c630338c854cd9e9c8d74' />
     </div>
   )
 }

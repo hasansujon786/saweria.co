@@ -63,17 +63,22 @@ export interface IconButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean
 }
-export const IconButton = ({ asChild, ...props }: IconButtonProps) => {
+export const IconButton = ({
+  asChild,
+  className,
+  children,
+  ...props
+}: IconButtonProps) => {
   const Comp = asChild ? Slot : 'button'
   return (
     <Comp
       className={cn(
         'p-2.5 rounded-md focus-ring hover:bg-blue-100 text-foreground',
-        props.className
+        className
       )}
       {...props}
     >
-      {props.children}
+      {children}
     </Comp>
   )
 }

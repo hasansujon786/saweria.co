@@ -9,6 +9,8 @@ type NavigationRailProps = {
 export const NavigationRail = (props: NavigationRailProps) => {
   const [curSection, setCurSection] = useState(0)
   const handleSectionChange = (idx: number) => setCurSection(idx)
+  const Comp = props.sections[curSection]
+
   return (
     <div className='flex-1 grid grid-cols-[180px_auto] gap-10'>
       <div className='flex flex-col gap-4'>
@@ -24,7 +26,7 @@ export const NavigationRail = (props: NavigationRailProps) => {
         ))}
       </div>
       <div className='pr-2.5 flex flex-col gap-6'>
-        {props.sections[curSection]()}
+        <Comp />
       </div>
     </div>
   )
