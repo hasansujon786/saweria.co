@@ -1,17 +1,40 @@
 import { cn } from '@/lib/utils'
+import { VariantProps, cva } from 'class-variance-authority'
 import { Url } from 'next/dist/shared/lib/router/router'
 import Link from 'next/link'
 
-type ColorBoxProps = {
+const boxContainerVarients = cva(
+  cn(
+    'relative rounded-md group hover:focus-visible:ring-0',
+    'before:top-4 before:left-8',
+    'before:bg-[#222] before:absolute before:rounded-md before:h-full before:w-full before:-z-10'
+  ),
+  {
+    variants: {
+      shadowSize: {
+        default: 'before:top-2.5 before:left-2.5',
+        sm: 'before:top-1 before:left-1',
+      },
+    },
+    defaultVariants: {
+      shadowSize: 'default',
+    },
+  }
+)
+
+interface ColorBoxProps extends VariantProps<typeof boxContainerVarients> {
   children?: React.ReactNode
   className?: string
   href?: Url
+  containerClassNames?: string
 }
 
 export const ColorBox = ({
   href,
+  containerClassNames,
   className,
   children,
+  shadowSize,
   ...props
 }: ColorBoxProps) => {
   const isLink = !!href
@@ -20,15 +43,13 @@ export const ColorBox = ({
     <Comp
       href={isLink ? href : ''}
       className={cn(
-        'relative rounded-md group hover:focus-visible:ring-0',
-        'before:top-4 before:left-8',
-        'before:bg-[#222] before:absolute before:rounded-md before:h-full before:w-full before:-z-10',
-        'before:top-2.5 before:left-2.5',
+        boxContainerVarients({ shadowSize, className: containerClassNames }),
         {
           'before:transition-transform before:duration-100 ease-out hover:before:-translate-y-[4px] hover:before:-translate-x-[4px]':
             isLink,
         }
       )}
+      {...props}
     >
       <div
         className={cn(
