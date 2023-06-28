@@ -14,6 +14,7 @@ const boxContainerVarients = cva(
       shadowSize: {
         default: 'before:top-2.5 before:left-2.5',
         sm: 'before:top-1 before:left-1',
+        none: 'before:top-0 before:left-0',
       },
     },
     defaultVariants: {

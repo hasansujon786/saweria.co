@@ -11,7 +11,18 @@ a:not(.focus-ring-none),
   @apply flex justify-center items-center;
 }
 
-/* button::before { */
-/*   /1* background: blue !important; *1/ */
-/*   /1* z-index: -1 !important; *1/ */
-/* } */
+.quick_ammount_btn {
+  @apply flex-1 px-8;
+}
+.quick_ammount_btn:nth-child(1) {
+  @apply bg-secondary;
+}
+.quick_ammount_btn:nth-child(2) {
+  @apply bg-blue-400;
+}
+.quick_ammount_btn:nth-child(3) {
+  @apply bg-primary;
+}
+.quick_ammount_btn:nth-child(4) {
+  @apply bg-purple-400;
+}

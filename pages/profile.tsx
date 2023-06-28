@@ -1,5 +1,5 @@
+import Qris from '@/components/Qris'
 import { Card } from '@/components/ui/Card'
-import { ColorBox } from '@/components/ui/ColorBox'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button, IconButton } from '@/components/ui/button'
 import { BaseInput, FormElement, Input } from '@/components/ui/input'
@@ -9,7 +9,6 @@ import { applink, demoUser } from '@/constants/strings'
 import AdminLayout from '@/layouts/admin'
 import { cn } from '@/lib/utils'
 import { Copy, ExternalLink, Plus, Trash2 } from 'lucide-react'
-import Image from 'next/image'
 
 export default function Profile() {
   return (
@@ -156,30 +155,14 @@ const PreviewCard = () => {
       <Card className='space-y-4 max-w-sm'>
         <div className='bg-gray-300 h-6 animate-pulse'></div>
         <div className='bg-gray-300 h-6 animate-pulse'></div>
+        <div className='bg-gray-300 h-6 animate-pulse'></div>
         <div className='relative z-0 flex flex-wrap gap-3'>
-          {['bg-secondary', 'bg-blue-400', 'bg-primary', 'bg-purple-400'].map(
-            (t) => (
-              <div className='flex-1'>
-                <Button className={cn('w-full px-8', t)}>5k</Button>
-              </div>
-            )
-          )}
+          {['5k', '10k', '25k', '100k'].map((t) => (
+            <Button className='quick_ammount_btn'>{t}</Button>
+          ))}
         </div>
         <div className='bg-gray-300 h-6 animate-pulse'></div>
-        <div className='bg-gray-300 h-6 animate-pulse'></div>
-        <div className='relative z-0 flex'>
-          <ColorBox className='bg-[#C6B392]' shadowSize='sm'>
-            <div className='w-32 h-16'>
-              <Image
-                className='w-full h-full object-cover'
-                alt='qrid logo'
-                width={100}
-                height={100}
-                src='/assets/qris.webp'
-              />
-            </div>
-          </ColorBox>
-        </div>
+        <Qris />
       </Card>
     </div>
   )

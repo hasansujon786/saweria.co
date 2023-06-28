@@ -13,7 +13,7 @@ const BaseCheckbox = React.forwardRef<
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      'peer h-4 w-4 shrink-0 rounded-sm border-2 border-input ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary',
+      'peer h-5 w-5 shrink-0 rounded-sm border-2 border-input ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-primary',
       className
     )}
     {...props}
@@ -36,19 +36,14 @@ export interface CheckboxProps
 
 export function Checkbox({ label, ...props }: CheckboxProps) {
   return (
-    <div className='items-top flex space-x-2'>
+    <div className='items-top flex items-start space-x-2'>
       <BaseCheckbox {...props} />
-      <div className='grid gap-1.5 leading-none'>
-        <label
-          htmlFor={props.id}
-          className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
-        >
-          {label}
-        </label>
-        {/* <p className='text-sm text-muted-foreground'> */}
-        {/*   You agree to our Terms of Service and Privacy Policy. */}
-        {/* </p> */}
-      </div>
+      <label
+        htmlFor={props.id}
+        className='text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+      >
+        {label}
+      </label>
     </div>
   )
 }
