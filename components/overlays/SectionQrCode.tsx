@@ -7,6 +7,8 @@ import { Card } from '@/components/ui/Card'
 import { Button, IconButton } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { H4 } from '@/components/ui/typography'
+import { applink, demoUser } from '@/constants/strings'
+import QRCode from 'react-qr-code'
 import { ColorBox } from '../ui/ColorBox'
 
 export const SectionQrCode = () => {
@@ -15,9 +17,12 @@ export const SectionQrCode = () => {
       <div>
         <p className='mb-4'>QR yang menunjuk ke halaman saweriamu!</p>
         <div className='max-w-xs mx-auto'>
-          {/* TODO: place qr */}
-          <ColorBox className='bg-primary '>
-            <div className='border border-input aspect-square rounded-md'></div>
+          <ColorBox className='bg-primary aspect-square'>
+            <QRCode
+              bgColor='transparent'
+              value={`${applink}/${demoUser.userName}`}
+              style={{ width: '100%', height: '100%' }}
+            />
           </ColorBox>
         </div>
       </div>
