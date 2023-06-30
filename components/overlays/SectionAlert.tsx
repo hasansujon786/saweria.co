@@ -11,6 +11,10 @@ import { voiceVarientOptions } from '@/constants/options'
 import { BannerPreviewBox, ColorInput, FontInput, UrlFooterBox } from './shared'
 
 export const SectionAlert = () => {
+  const onBringupNotification = () => {
+    console.log('hanlde BringupNotification here')
+  }
+
   return (
     <div className='grid grid-cols-1 gap-8'>
       <div>
@@ -131,7 +135,10 @@ export const SectionAlert = () => {
         </div>
       </Card>
 
-      <UrlFooterBox url='https://saweria.co/widgets/alert?streamKey=c1e89a4cda4c630338c854cd9e9c8d74' />
+      <UrlFooterBox
+        bringUpNotification={onBringupNotification}
+        url='https://saweria.co/widgets/alert?streamKey=c1e89a4cda4c630338c854cd9e9c8d74'
+      />
     </div>
   )
 }

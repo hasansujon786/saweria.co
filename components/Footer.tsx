@@ -1,3 +1,6 @@
+import { Instagram, Mail, Twitter } from 'lucide-react'
+import { IconButton } from './ui/button'
+
 export const Footer = () => {
   return (
     <footer className='flex justify-between text-lg font-mono py-8 mt-auto'>
@@ -22,7 +25,18 @@ export const Footer = () => {
             Changelog
           </a>
         </li>
-        {/* // TODO: add icon */}
+
+        <div className='space-x-2'>
+          <IconButton className='rounded-full'>
+            <Mail />
+          </IconButton>
+          <IconButton className='rounded-full'>
+            <Instagram />
+          </IconButton>
+          <IconButton className='rounded-full'>
+            <Twitter />
+          </IconButton>
+        </div>
       </ul>
     </footer>
   )

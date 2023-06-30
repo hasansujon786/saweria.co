@@ -12,6 +12,9 @@ import { Label } from '@/components/ui/label'
 import { H4 } from '@/components/ui/typography'
 
 export const SectionMediaShare = () => {
+  const onBringupNotification = () => {
+    console.log('hanlde BringupNotification here')
+  }
   return (
     <div className='grid grid-cols-1 gap-8'>
       <div>
@@ -98,7 +101,10 @@ export const SectionMediaShare = () => {
         </div>
       </Card>
 
-      <UrlFooterBox url='https://saweria.co/widgets/mediashare?streamKey=c1e89a4cda4c630338c854cd9e9c8d74' />
+      <UrlFooterBox
+        bringUpNotification={onBringupNotification}
+        url='https://saweria.co/widgets/mediashare?streamKey=c1e89a4cda4c630338c854cd9e9c8d74'
+      />
     </div>
   )
 }

@@ -13,6 +13,9 @@ import { H4 } from '@/components/ui/typography'
 import { Play, Settings } from 'lucide-react'
 
 export const SectionSubathon = () => {
+  const onBringupNotification = () => {
+    console.log('hanlde BringupNotification here')
+  }
   return (
     <div className='grid grid-cols-1 gap-8'>
       <div>
@@ -127,7 +130,10 @@ export const SectionSubathon = () => {
         </ol>
       </div>
 
-      <UrlFooterBox url='https://saweria.co/widgets/subathon?streamKey=c1e89a4cda4c630338c854cd9e9c8d74' />
+      <UrlFooterBox
+        bringUpNotification={onBringupNotification}
+        url='https://saweria.co/widgets/subathon?streamKey=c1e89a4cda4c630338c854cd9e9c8d74'
+      />
     </div>
   )
 }

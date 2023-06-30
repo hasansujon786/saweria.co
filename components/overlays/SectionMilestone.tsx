@@ -71,7 +71,6 @@ export const SectionMilestone = () => {
         </div>
       </Card>
 
-      {/* // TODO: remove 3rd button */}
       <UrlFooterBox url='https://saweria.co/widgets/milestone?streamKey=c1e89a4cda4c630338c854cd9e9c8d74' />
     </div>
   )

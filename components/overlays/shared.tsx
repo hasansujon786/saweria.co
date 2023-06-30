@@ -36,7 +36,14 @@ export const FontInput = ({ label = 'Font Isi:' }: { label?: string }) => {
   )
 }
 
-export const UrlFooterBox = (props: { url: string }) => {
+type UrlFooterBoxProp = {
+  url: string
+  bringUpNotification?: () => void
+}
+export const UrlFooterBox = ({
+  bringUpNotification,
+  url,
+}: UrlFooterBoxProp) => {
   return (
     <div className='space-y-3'>
       <H4>URL:</H4>
@@ -53,7 +60,7 @@ export const UrlFooterBox = (props: { url: string }) => {
         readOnly
         aria-readonly
         disableWhenReadonly={false}
-        defaultValue={props.url}
+        defaultValue={url}
       />
 
       <div className='gap-6 flex flex-col md:flex-row'>
@@ -63,9 +70,17 @@ export const UrlFooterBox = (props: { url: string }) => {
         <Button size='lg' variant='default'>
           Buka di tab baru
         </Button>
-        <Button size='lg' className='bg-purple-400'>
-          Munculkan notifikasi
-        </Button>
+        {!!bringUpNotification ? (
+          <Button
+            onClick={bringUpNotification}
+            size='lg'
+            className='bg-purple-400'
+          >
+            Munculkan notifikasi
+          </Button>
+        ) : (
+          <div className='flex-1'></div>
+        )}
       </div>
     </div>
   )

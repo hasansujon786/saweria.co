@@ -11,6 +11,9 @@ import { ColorBox } from '../ui/ColorBox'
 import { CreateVotingOptions } from './SectionVoting'
 
 export const SectionWheel = () => {
+  const onBringupNotification = () => {
+    console.log('hanlde BringupNotification here')
+  }
   return (
     <div className='grid grid-cols-1 gap-8'>
       <div>
@@ -81,7 +84,10 @@ export const SectionWheel = () => {
         </div>
       </Card>
 
-      <UrlFooterBox url='https://saweria.co/widgets/wheel?streamKey=c1e89a4cda4c630338c854cd9e9c8d74' />
+      <UrlFooterBox
+        bringUpNotification={onBringupNotification}
+        url='https://saweria.co/widgets/wheel?streamKey=c1e89a4cda4c630338c854cd9e9c8d74'
+      />
     </div>
   )
 }
