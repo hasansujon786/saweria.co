@@ -10,6 +10,7 @@ export const AppRoutes = {
   admin: '/admin',
   admin_integrations: '/admin/integrations',
   login: '/login',
+  profile: '/profile',
   register: '/register',
   overlays: '/overlays',
   transactions: '/transactions',
