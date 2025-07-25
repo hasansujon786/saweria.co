@@ -1,10 +1,11 @@
 # Saweria – Frontend (Freelance Project)
 
-## Overview
+## 🧭 Overview
 
-**Saweria** is a platform designed to help creators connect directly with their fans and build sustainable communities. As a freelance frontend developer, I contributed to building a seamless and engaging user experience using modern web technologies. The site equips creators with tools to grow their communities and monetize effectively.
+**Saweria** is a platform that helps creators connect directly with their fans and build sustainable communities.  
+As a freelance frontend developer, I contributed to delivering a seamless and engaging user experience using modern web technologies. The site equips creators with tools to grow their audience and monetize effectively.
 
-**[Visit Saweria](https://saweria.co/en)**
+🔗 **[Visit Saweria](https://saweria.co/en)**
 
 ![saweria.co](./design/saweria.co.png)
 
@@ -13,29 +14,29 @@
 ## ✨ Features
 
 - **Creator-Focused Tools**  
-  Enables creators to engage with their audience through intuitive features.
+  Intuitive features to engage and grow creator communities.
 
 - **Responsive Design**  
-  Optimized for both desktop and mobile devices to ensure accessibility.
+  Optimized for desktop and mobile for broad accessibility.
 
 - **Interactive UI Components**  
   Built with Radix UI and Tailwind CSS for a polished, consistent interface.
 
 - **Customizable & Scalable**  
-  Modular architecture designed for easy feature extension.
+  Modular code structure supports future enhancements.
 
 - **QR Code Integration**  
-  Donation and payment workflows using `react-qr-code`.
+  Payment workflows using `react-qr-code`.
 
 ---
 
-## 🛠 Technologies Used
+## 🛠 Tech Stack
 
 - **Framework & Language**: Next.js, TypeScript
 - **Styling**: Tailwind CSS, Tailwind CSS Animate
 - **UI Components**: Radix UI, ShadCN
 - **Tooling**: ESLint, PostCSS, Autoprefixer
-- **Environment**: Node.js 20.3.1, React 18.2.0
+- **Runtime**: Node.js 20.3.1, React 18.2.0
 
 ---
 
@@ -57,33 +58,33 @@
 
 ## 📁 Project Structure
 
-Built with Next.js and a modular file organization approach to ensure scalability and maintainability.
+Built with Next.js using a modular structure for scalability and maintainability.
 
 ```bash
 saweria.co/
-├── components/  # Reusable UI components
-│ ├── overlays/  # Components for overlays
-│ └── ui/        # General UI elements
-├── constants/   # Static values and configuration
-├── design/      # Design assets and references
-├── layouts/     # Layout components for pages
-├── lib/         # Helper functions and utilities
-├── pages/       # Next.js routes and pages
-├── public/      # Static public assets
-├── styles/      # Global and theme styles
-└── ...          # ESLint, Prettier, Tailwind, etc.
+├── components/      # Reusable UI components
+│   ├── overlays/    # Overlay components
+│   └── ui/          # General UI elements
+├── constants/       # Static values and configuration
+├── design/          # Design assets and mockups
+├── layouts/         # Shared page layouts
+├── lib/             # Utilities and helpers
+├── pages/           # App routes (Next.js)
+├── public/          # Static assets (e.g., images)
+├── styles/          # Global and theme styles
+└── ...              # Config files (ESLint, Tailwind, etc.)
 ```
 
 ---
 
-## 🚀 Installation
+## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js ≥ 18
-- Yarn (or npm)
+- Yarn or npm
 
-### Steps
+### Installation
 
 ```bash
 git clone https://github.com/hasansujon786/saweria.co
@@ -98,21 +99,24 @@ Open `http://localhost:3000` in your browser.
 
 ## 🧾 Portfolio Note
 
-This repository is part of my developer portfolio and showcases my frontend development capabilities. The project highlights my ability to deliver responsive, scalable UI using modern tools in a freelance setting. Feel free to explore the code and reach out for collaboration or job opportunities.
+This project is part of my developer portfolio and showcases my ability to craft modern, responsive frontend applications.  
+It reflects my work as a freelance frontend engineer and my commitment to performance, usability, and scalable code.
+
+Feel free to explore the code — and reach out if you're hiring or interested in collaboration!
 
 ---
 
 ## 📬 Contact
 
-For inquiries or opportunities, connect with me:
-
 - **GitHub**: [github.com/hasansujon786](https://github.com/hasansujon786)
 - **Email**: [hasansujon786@gmail.com](mailto:hasansujon786@gmail.com)
 - **Portfolio**: [hasansujon786.github.io](https://hasansujon786.github.io)
 
+---
+
 ## 🛡 License
 
-This project is licensed under the **CC BY-NC 4.0 License**.  
-Feel free to learn from and adapt the code for personal or educational use — commercial use is not permitted.
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.  
+You’re welcome to learn from or adapt the code for personal or educational use — but commercial use is not permitted.
 
-[Read more CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/)
+🔗 [View License](https://creativecommons.org/licenses/by-nc/4.0/)
