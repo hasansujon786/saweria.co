@@ -99,7 +99,7 @@ Open `http://localhost:3000` in your browser.
 
 ## 🧾 Portfolio Note
 
-This project is part of my developer portfolio and showcases my ability to craft modern, responsive frontend applications.  
+This project is part of my developer portfolio and showcases my ability to craft modern, responsive frontend applications.
 It reflects my work as a freelance frontend engineer and my commitment to performance, usability, and scalable code.
 
 Feel free to explore the code — and reach out if you're hiring or interested in collaboration!
