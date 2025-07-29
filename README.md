@@ -87,13 +87,17 @@ saweria.co/
 ### Installation
 
 ```bash
-git clone https://github.com/hasansujon786/saweria.co
-cd saweria.co
 yarn install
 yarn dev
 ```
 
 Open `http://localhost:3000` in your browser.
+
+---
+
+## 👤 Role
+
+This project was developed by **Hasan Mahmud** as a **solo developer**.
 
 ---
 
@@ -116,7 +120,7 @@ Feel free to explore the code — and reach out if you're hiring or interested i
 
 ## 🛡 License
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.  
-You’re welcome to learn from or adapt the code for personal or educational use — but commercial use is not permitted.
+This project is licensed under the **CC BY-NC 4.0 License**.  
+You’re welcome to learn from or adapt the code for personal or educational use — commercial use is not permitted.
 
 🔗 [View License](https://creativecommons.org/licenses/by-nc/4.0/)
